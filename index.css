@@ -1,0 +1,109 @@
+/* Configuraciones generales de estilo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background: url('fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Contenedor central */
+.container {
+    text-align: center;
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+/* Título */
+h1 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #ff4a4a;
+    text-shadow: 3px 3px 10px #000;
+    margin-bottom: 20px;
+}
+
+/* Estilo del poema */
+.poema {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+    color: #f0f0f0;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+}
+
+/* Botón para reproducir música */
+#musicButton {
+    font-size: 1.5rem;
+    color: #ff4a4a;
+    background: none;
+    border: 2px solid #ff4a4a;
+    margin-top: 30px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: color 0.4s ease, transform 0.3s ease, background-color 0.4s ease;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 74, 74, 0.6), 0 0 20px rgba(255, 74, 74, 0.4);
+}
+
+/* Efecto hover en el botón */
+#musicButton:hover {
+    color: #fff;
+    background-color: #ff4a4a;
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(255, 74, 74, 0.9), 0 0 30px rgba(255, 74, 74, 0.7);
+}
+
+/* Animación de rebote al hacer clic */
+#musicButton:active {
+    animation: bounce 0.3s;
+}
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+/* Mensaje que aparece después de reproducir la música */
+#message {
+    font-size: 1.3rem;
+    color: #ff4a4a;
+    margin-top: 15px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación de corazones flotantes */
+.hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('heart.png') no-repeat center;
+    animation: floatHearts 5s infinite;
+}
+
+@keyframes floatHearts {
+    0% { transform: translateY(0); opacity: 0.7; }
+    50% { transform: translateY(-20px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 0.7; }
+}
+
